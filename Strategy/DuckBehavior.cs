@@ -36,4 +36,12 @@ namespace SimUDuck
             Console.WriteLine("Woof!");
         }
     }
+
+    public class CanNotFly : IFlyBehavior
+    {
+        public void Fly()
+        {
+            Console.WriteLine("Sorry! I Can't");
+        }
+    }
 }

@@ -9,24 +9,28 @@ namespace SimUDuck
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Mallard");
             Mallard mallard = new Mallard();
-            Helper(mallard);
+            DoSomething(mallard);
 
             Console.WriteLine("Spaniel");
             Spaniel spaniel = new Spaniel();
-            Helper(spaniel);
+            DoSomething(spaniel);
 
             Console.WriteLine("Progeny");
             Spaniel progeny = new Spaniel();
             progeny.SetQuack(new QuackLikeMallard());
-            Helper(progeny);
+            DoSomething(progeny);
+
+            Console.WriteLine("Rubber");
+            Duck rubber = new RubberSpaniel();
+            DoSomething(rubber);
 
             Console.ReadLine();
         }
 
-        static void Helper(Duck myDuck)
+        static void DoSomething(Duck myDuck)
         {
+            Console.WriteLine("-------------------");
             myDuck.Swim();
             myDuck.DoFly();
             myDuck.DoQuack();

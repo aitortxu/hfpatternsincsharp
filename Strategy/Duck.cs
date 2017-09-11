@@ -53,4 +53,13 @@ namespace SimUDuck
             SetQuack(new QuackLikeSpaniel());
         }
     }
+
+    public class RubberSpaniel : Duck
+    {
+        public RubberSpaniel()
+        {
+            SetFly(new CanNotFly());
+            SetQuack(new QuackLikeSpaniel());
+        }
+    }
 }
